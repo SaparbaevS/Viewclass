@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product detail</title>
+</head>
+<body>
+    <p>{{ product }}</p>
+    <p>
+        <a href="{% url 'update_product' product.slug %}">Update</a>
+    </p>
+    <p>
+        <a href="{% url 'delete_product' product.slug %}">Delete</a>
+    </p>
+</body>
+</html>

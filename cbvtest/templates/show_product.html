@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+</head>
+<body>
+    <div style="width: 300px; margin: auto; margin-top: 50px;">
+        <p>
+            <a href="{% url 'add_product' %}">Add</a>
+        </p>
+        <br>
+        {% for product in products %}
+        <p>{{ product }}</p>
+        <p>
+            <a href="{{ product.get_absolute_url }}">Pereyti</a>
+            <a href="{% url 'update_product' product.slug %}">Update</a>
+            <a href="{% url 'delete_product' product.slug %}">Delete</a>
+        </p>
+        <br>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
